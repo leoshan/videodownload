@@ -1,0 +1,18 @@
+https://aws.amazon.com/cn/lightsail/faq/
+
+
+数据传输如何收费？
+您的计划包括免费的数据传输限额。传入和传出您的实例的数据传输都将计入您的数据传输限额。
+在使用实例的公有 IP 地址时，如果您超出了数据传输限额，将只需为从 Lightsail 实例传输到 Internet 或传输到 AWS 资源的数据付费。
+在使用实例的私有 IP 地址时，即使您超出了数据传输限额，传入 Lightsail 实例和从 Lightsail 实例传出的数据也都是免费的。
+
+什么是数据传输计划限额？
+每一个 Lightsail 计划还包括正常数量的免费数据输入和输出。
+例如，如果使用最便宜的 Lightsail 捆绑包，那么您在一个月内可以向 Internet 发送和从中接收最多 1TB 的数据，无需额外付费。
+
+如何将 Lightsail 实例连接到我的 AWS 账户中的其他资源？
+您可以通过使用 VPC 对等连接将 Lightsail 实例以私密方式连接到您 AWS 账户中的 VPC 资源。
+只需在您的 Lightsail 账户页面上选择“Enable VPC peering (启用 VPC 对等连接)”，Lightsail 就会为您完成这个过程。
+启用 VPC 对等连接后，您就可以使用其私有 IP 来寻址默认 AWS VPC 中的其他 AWS 资源。在此处查找说明。
+请注意，您需要在 AWS 账户中设置一个默认 VPC，以便与 Lightsail 的 VPC 对等连接能够正常运行。
+2013 年 12 月之前创建的 AWS 账户没有默认 VPC，您需要设置一个。在此处查找有关设置默认 VPC 的更多信息。
