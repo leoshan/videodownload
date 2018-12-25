@@ -14,7 +14,7 @@ def download_video(id):
     for item in response['Items']:
         url = item['download_url']
         out_fname = "video_"+item['id_bykey']+".mp4"
-        filename = wget.download(url,out_fname)
+        filename = wget.download(url,out_fname) # where download file stor
 
         video_name = item['video_name']
         str_videoname = video_name.encode('utf-8')
@@ -22,6 +22,7 @@ def download_video(id):
         str_filename = str(filename)
         LOG_FORMAT = "%(asctime)s  %(filename)s : %(levelname)s  %(message)s"
         DATE_FORMAT = "'%Y-%m-%d %H:%M:%S'"
+        # where log will stor
         logging.basicConfig(filename='download.log', level=logging.INFO, format=LOG_FORMAT, datefmt=DATE_FORMAT, filemode = 'w')
         logging.info('video id: %s , file name: %s , video name: %s ', str_id, str_filename, str_videoname)
 
