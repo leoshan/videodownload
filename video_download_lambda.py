@@ -26,3 +26,5 @@ def download_video(id):
         logging.info('video id: %s , file name: %s , video name: %s ', str_id, str_filename, str_videoname)
 
 download_video(4)
+for id in range(1,100):
+    download_video(id)
