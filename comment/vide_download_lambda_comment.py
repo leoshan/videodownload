@@ -51,5 +51,5 @@ def download_video(event,context): # lambda函数的固定模式，两个参数�
         key = "video1k/video_"+item['id_bykey']+".mp4" # S3_client upload_file需要指定文件名video_xxx.mp4及路径video1k
         bucket = 'video-uw2' # 指定bucket
         s3_client.upload_file(upload_path, bucket, key) #S3 client上传数据
-        print('Upload video id is: %d, filename is: %s ,video name is: ',bytes(id), key, str_videoname)
-
+        #打印日志到cloudwatch
+        print('Upload video id is: ',bytes(id),'; filename is: ', filename,'; video name is: ', str_videoname)
