@@ -13,7 +13,7 @@
   Lambda程序打包及函数处理应用，角色设置。
 '''
 
-from __future__ import print_function
+from __future__ import print_function # print函数在Python2和Python3之间的兼容性
 import wget # pip install wget
 import boto3 # pip install boto3
 import json
@@ -45,7 +45,7 @@ def download_video(event,context): # lambda函数的固定模式，两个参数�
         #wget要下载文件到指定路径/tmp，且要改文件名字video_xxx.mp4
         out_fname = "/tmp/video_"+item['id_bykey']+".mp4" # 文件输出路径及改名
         filename = wget.download(url,out_fname) # wget下载，输出结果是文件存储路径
-        print('Downloaded video id is %d, filename is %s',bytes(id), filename) #打印日志
+        print('Downloaded video id is: ',bytes(id),'; filename is: ', filename) #打印日志
         #S3从/tmp目录将视频文件上传到所属的Bucket及指定目录
         upload_path = filename # 上传路径就是刚刚的wget下载之后的执行结果
         key = "video1k/video_"+item['id_bykey']+".mp4" # S3_client upload_file需要指定文件名video_xxx.mp4及路径video1k
