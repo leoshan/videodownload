@@ -14,7 +14,7 @@ def filter_nones(dict):
 
 id = 0
 for i in range(1,9207):
-    REQUEST_URL="https://www.hiporn.net/v1/videolist/?page="+bytes(i)+"&limit=12"
+    REQUEST_URL="https://www.hixxxx.net/v1/videolist/?page="+bytes(i)+"&limit=12"
     r = requests.get(REQUEST_URL)
     original_json = r.json()
     response_json = original_json['response']
@@ -29,8 +29,8 @@ for i in range(1,9207):
         video_name = movie['title']
         date = movie['date']
         views = movie['views']
-        video_url = "https://gmqf2.hiporn.tw/v/"+movie['id']
-        download_url = "https://cdnclient9377.vcdn.us/download/mp4/"+movie['id_bykey']+".mp4"
+        video_url = "https://gmqf2.hixxxx.tw/v/"+movie['id']
+        download_url = "https://cdnclientNNNN.vcdn.us/download/mp4/"+movie['id_bykey']+".mp4"
         id = id + 1
 
         table.put_item(
