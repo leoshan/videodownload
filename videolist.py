@@ -12,8 +12,8 @@ def filter_nones(dict):
         if value is u'':
             dict[key] = 'noname'
 
-id = 0
-for i in range(1,9207):
+id = 0 # id = putitem.log last line
+for i in range(1,9207): # r['total']/12
     REQUEST_URL="https://www.hixxxx.net/v1/videolist/?page="+bytes(i)+"&limit=12"
     r = requests.get(REQUEST_URL)
     original_json = r.json()
