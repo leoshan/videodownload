@@ -1,5 +1,5 @@
 # videodownload
-Python Json DynamoDB（结构化数据存储） S3 Galicer（数据存储） Lightsail（数据传输）
+Python Json DynamoDB（结构化数据存储） S3 Galicer（数据存储） Lightsail（数据传输）Lambda(批量下载)
 
 Restful API信息抓取存储到 DynamoDB，把云计算的资源用起来
 
