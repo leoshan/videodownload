@@ -34,3 +34,7 @@ Amazon SQS 事件
         }
     ]
 }
+
+https://docs.aws.amazon.com/zh_cn/lambda/latest/dg/with-sqs-create-package.html
+
+Lambda SQS example
